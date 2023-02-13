@@ -32,4 +32,8 @@
         </plugins>
     </build>
 
+    <scm>
+        <developerConnection>scm:git:git@github.com:azermirzayev/sfg-pet-clinic.git</developerConnection>
+    </scm>
+
 </project>
