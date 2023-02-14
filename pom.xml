@@ -57,7 +57,6 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/azermirzayev/sfg-pet-clinic.git</developerConnection>
-        <tag>sfg-pet-clinic-0.0.3</tag>
     </scm>
 
 </project>
