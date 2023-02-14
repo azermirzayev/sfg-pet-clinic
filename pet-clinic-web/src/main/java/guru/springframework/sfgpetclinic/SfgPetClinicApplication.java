@@ -1,4 +1,4 @@
-package sfgpetclinic;
+package guru.springframework.sfgpetclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SfgPetClinicApplication {
 
     public static void main(String[] args) {
-        System.out.println("web");
+
+        System.out.println("test");
         SpringApplication.run(SfgPetClinicApplication.class, args);
     }
 
