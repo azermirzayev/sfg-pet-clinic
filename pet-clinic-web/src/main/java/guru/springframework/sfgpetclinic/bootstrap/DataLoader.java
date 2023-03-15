@@ -7,7 +7,7 @@ import guru.springframework.sfgpetclinic.model.Speciality;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.service.OwnerService;
 import guru.springframework.sfgpetclinic.service.PetTypeService;
-import guru.springframework.sfgpetclinic.service.SpecialityService;
+import guru.springframework.sfgpetclinic.service.SpecialtyService;
 import guru.springframework.sfgpetclinic.service.VetService;
 import java.time.LocalDate;
 import org.springframework.boot.CommandLineRunner;
@@ -19,9 +19,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
-    private final SpecialityService specialtyService;
+    private final SpecialtyService specialtyService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialityService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
@@ -42,7 +42,7 @@ public class DataLoader implements CommandLineRunner {
         PetType saveDogpetType = petTypeService.save(dog);
 
         PetType cat = new PetType();
-        cat.setName("Cog");
+        cat.setName("Cat");
         PetType saveCatpetType = petTypeService.save(cat);
 
         Speciality radiology = new Speciality();
@@ -73,14 +73,12 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner1);
 
-
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
         owner2.setAddress("123  Brickerel");
         owner2.setCity("Miami");
         owner2.setTelephone("12121212");
-
 
         Pet fionasPet = new Pet();
         fionasPet.setPetType(saveCatpetType);
@@ -90,6 +88,7 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(fionasPet);
 
         ownerService.save(owner2);
+
         System.out.println("Loaded owners... ");
 
         Vet vet1 = new Vet();
